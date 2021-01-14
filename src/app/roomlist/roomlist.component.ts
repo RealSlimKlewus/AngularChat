@@ -37,8 +37,7 @@ export class RoomlistComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   enterChatRoom(roomname: string): void {
     const chat = { roomname: '', nickname: '', message: '', date: '', type: '' };

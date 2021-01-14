@@ -99,8 +99,6 @@ export class ChatroomComponent implements OnInit {
         userRef.update({status: 'offline'});
       }
     });
-
     this.router.navigate(['/roomlist/' + this.nickname]);
   }
-
 }
