@@ -74,7 +74,6 @@ export class ChatroomComponent implements OnInit {
     chat.type = 'message';
     const newMessage = firebase.database().ref('chats/').push();
     newMessage.set(chat);
-    console.log(newMessage);
     this.chatForm = this.formBuilder.group({
       message : [null, Validators.required]
     });
