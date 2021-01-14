@@ -1,3 +1,13 @@
 .container {
   padding: 20px;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1{
+  font-size: 2em;
+}

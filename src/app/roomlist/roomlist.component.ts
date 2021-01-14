@@ -51,7 +51,7 @@ export class RoomlistComponent implements OnInit {
     const newMessage = firebase.database().ref('chats/').push();
     newMessage.set(chat);
 
-    firebase.database().ref('roomusers/').orderByChild('roomname').equalTo(roomname).on('value', (resp: any) => {
+    firebase.database().ref('roomusers/').orderByChild('roomname').equalTo(roomname).once('value', (resp: any) => {
       let roomuser = [];
       roomuser = snapshotToArray(resp);
       const user = roomuser.find(x => x.nickname === this.nickname);
